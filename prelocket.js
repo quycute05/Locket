@@ -15,45 +15,95 @@ if (ua.includes("Locket")) {
   obj.entries = obj.entries || {};
 
   // ============================================================
-  // 1. CẤU HÌNH GOLD, FEATURE GATES & PAYWALL
+  // 1. CẤU HÌNH GOLD, FEATURE GATES & PAYWALL (UPDATE)
   // ============================================================
   Object.assign(obj.entries, {
-    feature_gates: JSON.stringify({
-      app_icon_picker: "enabled",
-      camera_roll: "enabled",
-      camera_theme: "enabled",
-      locket_views: "enabled",
-      long_captions: "enabled",
-      longer_video: "enabled",
-      unlimited_friends: "enabled",
-      priority_support: "enabled",
-      profile_badge: "enabled",
-      remove_ads: "enabled",
-      video: "enabled",
-      custom_widget_frames: "enabled",
-      streak_recovery: "enabled",
-    }),
-    upsell_features: JSON.stringify({
-      app_icon_picker: true,
-      camera_roll: true,
-      camera_theme: true,
-      locket_views: true,
-      remove_ads: true,
-      custom_widget_frames: true,
-    }),
-    paywall_presentation_config: JSON.stringify({
-      uid: "paywall_testflight",
-      onboarding: false,
-      after_sent_moment: false,
-      on_foreground: false,
-      interval: 2592000,
-      profile_banner: true,
-    }),
+        feature_gates: JSON.stringify({
+            app_icon_picker: "enabled",
+            camera_roll: "enabled",
+            camera_roll_video: "enabled",
+            camera_roll_video_30s: "enabled",
+            camera_roll_video_upload: "enabled",
+            camera_roll_video_upload_30s: "enabled",
+            camera_roll_longer_video: "enabled",
+            camera_roll_longer_video_30s: "enabled",
+            camera_theme: "enabled",
+            locket_views: "enabled",
+            long_captions: "enabled",
+            longer_video: "enabled",
+            longer_video_30s: "enabled",
+            extended_video_30s: "enabled",
+            photo_library_video: "enabled",
+            photo_library_video_30s: "enabled",
+            gallery_video: "enabled",
+            gallery_video_30s: "enabled",
+            can_upload_30s_video: "enabled",
+            can_record_30s_video: "enabled",
+            allow_longer_video_upload: "enabled",
+            longer_video_upload: "enabled",
+            unlimited_friends: "enabled",
+            priority_support: "enabled",
+            profile_badge: "enabled",
+            profileBadge: "enabled",
+            gold_since_badge: "enabled",
+            goldSinceBadge: "enabled",
+            gold_badge_profile_menu: "enabled",
+            remove_ads: "enabled",
+            video: "enabled",
+            video_15s: "enabled",
+            video_30s: "enabled",
+            video_40s: "enabled",
+            video_60s: "enabled",
+            video_upload: "enabled",
+            video_upload_30s: "enabled",
+            custom_widget_frames: "enabled",
+            streak_recovery: "enabled",
+            streakRecovery: "enabled",
+            streaks: "enabled",
+            streak: "enabled",
+            streak_visualizations: "enabled",
+            streak_badge: "enabled",
+            groups: "enabled",
+            private_mode: "enabled",
+            viewer_mode: "enabled",
+            close_friends: "enabled",
+            camera_filter_sheet: "enabled",
+            camera_filters: "enabled",
+            camera_filter: "enabled",
+            filter: "enabled",
+            filters: "enabled",
+            photo_filters: "enabled",
+            ai_filters: "enabled",
+            holiday_effects: "enabled",
+            holiday_filters: "enabled",
+            holiday_filter: "enabled",
+            ar_filters: "enabled",
+            face_filters: "enabled",
+            profile_cover: "enabled",
+            profile_cover_photo: "enabled",
+            profile_customization: "enabled"
+        }),
+        upsell_features: JSON.stringify({
+            app_icon_picker: true,
+            camera_roll: true,
+            camera_theme: true,
+            locket_views: true,
+            remove_ads: true,
+            custom_widget_frames: true
+        }),
+        paywall_presentation_config: JSON.stringify({
+            uid: "paywall_testflight",
+            onboarding: false,
+            after_sent_moment: false,
+            on_foreground: false,
+            interval: 2592000,
+            profile_banner: true
+        }),
     feature_discovery_popup_config: JSON.stringify({
       tag: "LOCKET GOLD",
       tag_gradient: true,
       tag_style: "gold_gradient",
-      title: " Locket Gold ",
+      title: " Locket Gold by Mquy ",
       feature_set: [
         {
           title: "Nâng Gold thành công✨",
@@ -73,6 +123,55 @@ if (ua.includes("Locket")) {
     settings_instagram_url: "https://www.instagram.com/_.iamwuy//",
     settings_facebook_url: "https://www.facebook.com/iamwuy.05?locale=vi_VN",
   });
+	// BỘ CỜ MỞ KHÓA BỘ LỌC GOLD & TOÀN DIỆN
+        country_code: "US",
+        region_code: "US",
+        is_us_user: "true",
+        camera_filters_enabled: "true",
+        camera_filter_enabled: "true",
+        holiday_filters_enabled: "true",
+        ai_filters_enabled: "true",
+        camera_filter_gold_only: "false",
+        camera_filters_gold_only: "false",
+        holiday_filters_gold_only: "false",
+        filter_gold_only: "false",
+        filters_gold_only: "false",
+        ai_filter_gold_only: "false",
+        ai_filters_gold_only: "false",
+        filter_paywall_enabled: "false",
+        camera_filter_paywall_enabled: "false",
+        filter_upsell_enabled: "false",
+        require_gold_for_filters: "false",
+        require_gold_for_filter: "false",
+        requires_gold_for_filters: "false",
+        requires_gold_for_filter: "false",
+        requires_gold_for_camera_filters: "false",
+        camera_filter_requires_gold: "false",
+        camera_filters_require_gold: "false",
+        ai_filter_requires_gold: "false",
+        ai_filters_require_gold: "false",
+        filter_requires_gold: "false",
+        filters_require_gold: "false",
+        filtered_image_requires_gold: "false",
+        filtered_images_require_gold: "false",
+        filtered_image_gold_only: "false",
+        filtered_images_gold_only: "false",
+        free_filters_enabled: "true",
+        filter_selection_enabled: "true",
+        camera_filter_sheet_selection_enabled: "true",
+        sheet_filters_selectable: "true",
+        dismiss_filter_sheet_on_select: "true",
+        is_gold: "true",
+        has_gold: "true",
+        is_gold_user: "true",
+        user_is_gold: "true",
+        gold_user: "true",
+        gold_active: "true",
+        all_filters_free: "true",
+        unlocked_filters: "true",
+        camera_filter_max_count: "50",
+        max_camera_filters: "50"
+    });
 
   // ============================================================
   // 2. CHẶN QUẢNG CÁO & TẮT TRACKING (SENTRY)
@@ -6530,6 +6629,68 @@ Object.assign(obj.entries, {
           },
         ],
       },
+		section: "🎨 Meme & Hài hước 🤡",
+        items: [
+          {
+            overlay_id: "caption:cuoi_vcl_m_oi",
+            source: "remote",
+            caption: {
+              background: { colors: ["#F7971E", "#FFD200", "#FFEE58"] },
+              icon: { data: "😂", type: "emoji" },
+              max_lines: 1,
+              text: "Cười vcl m oi",
+              text_color: "#000000E6",
+              type: "static_content",
+            },
+          },
+          {
+            overlay_id: "caption:cuoi_xiu",
+            source: "remote",
+            caption: {
+              background: { colors: ["#FFEB3B", "#FF9800"] },
+              icon: { data: "😎", type: "emoji" },
+              max_lines: 1,
+              text: "Cười xỉu",
+              text_color: "#000000E6",
+              type: "static_content",
+            },
+          },
+          {
+            overlay_id: "caption:luon_vui_tuoi",
+            source: "remote",
+            caption: {
+              background: { colors: ["#00F2FE", "#4FACFE"] },
+              icon: { data: "🤡", type: "emoji" },
+              max_lines: 1,
+              text: "Luôn vui tươi",
+              text_color: "#FFFFFFE6",
+              type: "static_content",
+            },
+          },
+		{
+            overlay_id: "caption:con_vien_la_lan",
+            source: "remote",
+            caption: {
+              background: { colors: ["#A8C3A0", "#DCE5D1"] },
+              icon: { data: "🍂", type: "emoji" },
+              max_lines: 1,
+              text: "côn viên lá làn",
+              text_color: "#344536",
+              type: "static_content",
+            },
+          },
+          {
+            overlay_id: "caption:gian_dang_iu_hong",
+            source: "remote",
+            caption: {
+              background: { colors: ["#A8E6CF", "#D4F1BE", "#FFF1B6"] },
+              icon: { data: "🪳", type: "emoji" },
+              max_lines: 1,
+              text: "Gián đáng iu hong",
+              text_color: "#315847",
+              type: "static_content",
+            },
+          },
       {
         section: "🎨 Bất ổn & Hết cứu 🫠",
         items: [
@@ -6578,6 +6739,18 @@ Object.assign(obj.entries, {
               max_lines: 1,
               text: "tới công chuyện nữa rồi",
               text_color: "#634044",
+              type: "static_content",
+            },
+          },
+			{
+            overlay_id: "caption:than_chua_ma_don",
+            source: "remote",
+            caption: {
+              background: { colors: ["#607D8B", "#37474F"] },
+              icon: { data: "😔", type: "emoji" },
+              max_lines: 1,
+              text: "Thân chưa mà dỡn",
+              text_color: "#FFFFFFE6",
               type: "static_content",
             },
           },
@@ -7835,4 +8008,54 @@ Object.assign(obj.entries, {
     ]),
   });
 }
+$done({ body: JSON.stringify(obj) });
+// 9. HÀM VẢ CỰC MẠNH (FORCE OVERRIDE ĐÈ TẤT CẢ GIÁ TRỊ VỀ GOLD & 45S)
+// ============================================================
+function hamVaForceOverride(entries) {
+  if (!entries || typeof entries !== "object") return;
+
+  // 1. Vả thời lượng 45 giây vào mọi key video/duration
+  var durationKeys = [
+    "max_video_duration",
+    "video_max_duration",
+    "camera_roll_max_duration",
+    "camera_roll_video_max_duration",
+    "camera_roll_duration",
+    "video_trim_max_duration",
+    "trim_max_duration",
+    "gold_max_duration",
+    "goldMaxDuration",
+  ];
+  for (var i = 0; i < durationKeys.length; i++) {
+    entries[durationKeys[i]] = "45.0";
+  }
+
+  // 2. Vả cờ Gold & Miễn phí toàn bộ bộ lọc
+  entries["is_gold"] = "true";
+  entries["has_gold"] = "true";
+  entries["is_gold_user"] = "true";
+  entries["user_is_gold"] = "true";
+  entries["gold_user"] = "true";
+  entries["gold_active"] = "true";
+  entries["all_filters_free"] = "true";
+  entries["unlocked_filters"] = "true";
+  entries["free_filters_enabled"] = "true";
+  entries["filter_selection_enabled"] = "true";
+  entries["require_gold_for_filters"] = "false";
+  entries["requires_gold_for_filters"] = "false";
+  entries["camera_filter_gold_only"] = "false";
+  entries["camera_filters_gold_only"] = "false";
+  entries["filter_gold_only"] = "false";
+  entries["filters_gold_only"] = "false";
+  entries["ai_filter_gold_only"] = "false";
+  entries["ai_filters_gold_only"] = "false";
+  entries["filter_paywall_enabled"] = "false";
+  entries["camera_filter_paywall_enabled"] = "false";
+  entries["filter_upsell_enabled"] = "false";
+
+  // 3. Vả đè vô hiệu hóa cache cũ của iOS
+  entries["cache_ttl_seconds"] = "0";
+  entries["client_cache_ttl_sec"] = "0";
+}
+hamVaForceOverride(obj.entries);
 $done({ body: JSON.stringify(obj) });
